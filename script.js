@@ -1,55 +1,167 @@
-// Generate Prefix Of First Name
-function genPrefix (firstName){
-    if (firstName.length > 4){
-        return 'The Great'
-    }
-    else {
-        return 'Master'
-    }
-}
+// // Generate Prefix Of First Name
+// function genPrefix (firstName, gender){
+//     if (gender === 'boy') {
+//         return 'Lord'
+//     }
+//     else {
+//         return 'Lady'
+//     }
+// }
 
 // Generate First Name Of Name
-function genFirstName (firstName) {
+function genFirstName (genderType, firstName) {
     const firstLetter = firstName.charAt(0).toLowerCase()
-    if (firstLetter === 'a'){
-        return 'Anthony'
+    if (genderType === 'boy') {
+        if (firstLetter === 'a') {
+            return 'Anthony';
+        } else if (firstLetter === 'b') {
+            return 'Benedict';
+        } else if (firstLetter === 'c') {
+            return 'Colin';
+        } else if (firstLetter === 'd') {
+            return 'Damien';
+        } else if (firstLetter === 'e') {
+            return 'Edward';
+        } else if (firstLetter === 'f') {
+            return 'Frederick';
+        } else if (firstLetter === 'g') {
+            return 'George';
+        } else if (firstLetter === 'h') {
+            return 'Henry';
+        } else if (firstLetter === 'i') {
+            return 'Isaac';
+        }else if (firstLetter === 'j') {
+            return 'Julian';
+        }else if (firstLetter === 'k') {
+            return 'Kasper';
+        }else if (firstLetter === 'l') {
+            return 'Leopold';
+        }else if (firstLetter === 'm') {
+            return 'Maxwell';
+        }else if (firstLetter === 'n') {
+            return 'Nicholas';
+        }else if (firstLetter === 'o') {
+            return 'Oliver';
+        }else if (firstLetter === 'p') {
+            return 'Philip';
+        }else if (firstLetter === 'q') {
+            return 'Quentin';
+        }else if (firstLetter === 'r') {
+            return 'Rufus';
+        }else if (firstLetter === 's') {
+            return 'Simon';
+        }else if (firstLetter === 't') {
+            return 'Theodore';
+        }else if (firstLetter === 'u') {
+            return 'Ulysses';
+        }else if (firstLetter === 'v') {
+            return 'Vincent';
+        }else if (firstLetter === 'w') {
+            return 'William';
+        }else if (firstLetter === 'x') {
+            return 'Xavier';
+        }else if (firstLetter === 'y') {
+            return 'Yates';
+        }else if (firstLetter === 'z') {
+            return 'Zachary';
+        }else {
+            return 'Alex'; // Default name for boys
+        }
+
+        
+    } else if (genderType === 'girl') {
+        if (firstLetter === 'a') {
+            return 'Alice';
+        } else if (firstLetter === 'b') {
+            return 'Bridget';
+        } else if (firstLetter === 'c') {
+            return 'Charlotte';
+        } else if (firstLetter === 'd') {
+            return 'Daphne';
+        } else if (firstLetter === 'e') {
+            return 'Eloise';
+        } else if (firstLetter === 'f') {
+            return 'Fiona';
+        } else if (firstLetter === 'g') {
+            return 'Grace';
+        } else if (firstLetter === 'h') {
+            return 'Hyacinth';
+        } else if (firstLetter === 'i') {
+            return 'Isabella';
+        }else if (firstLetter === 'j') {
+            return 'Juliet';
+        }else if (firstLetter === 'k') {
+            return 'Katherine';
+        }else if (firstLetter === 'l') {
+            return 'Lucinda';
+        }else if (firstLetter === 'm') {
+            return 'Margaret';
+        }else if (firstLetter === 'n') {
+            return 'Nadine';
+        }else if (firstLetter === 'o') {
+            return 'Olivia';
+        }else if (firstLetter === 'p') {
+            return 'Penelope';
+        }else if (firstLetter === 'q') {
+            return 'Quinn';
+        }else if (firstLetter === 'r') {
+            return 'Rosalie';
+        }else if (firstLetter === 's') {
+            return 'Sophia';
+        }else if (firstLetter === 't') {
+            return 'Tiana';
+        }else if (firstLetter === 'u') {
+            return 'Unity';
+        }else if (firstLetter === 'v') {
+            return 'Violet';
+        }else if (firstLetter === 'w') {
+            return 'Wiona';
+        }else if (firstLetter === 'x') {
+            return 'Xina';
+        }else if (firstLetter === 'y') {
+            return 'Yasmin';
+        }else if (firstLetter === 'z') {
+            return 'Zara';
+        }else {
+            return 'Ava'; // Default name for girls
+        }
     }
- else if (firstLetter === 'b') {
-        return 'Bridgerton'
-}
-else if (firstLetter === 'c') {
-    return 'Bert'
-}
-else if (firstLetter === 'd') {
-    return 'Danbury'
-}
-else if (firstLetter === 'e') {
-    return 'Eloise'
-}
-else if (firstLetter === 'f') {
-    return 'Cam'
-}
-else if (firstLetter === 'g') {
-    return 'John'
-}
-else {
-    return 'Alex' //Default name for letters not matched
-}
 }
 
 // Generate Middle Name
 
-function genMiddleName (roadType, favoriteColor){
-    if (roadType === 'road'){
-        return `${favoriteColor}ridge`
-    } else if (roadType === 'street'){
-        return  `${favoriteColor}son`
+function genMiddleName (favoriteColor){
+    if (colorType === 'red'){
+        return 'Crimson';
+    } else if (colorType === 'orange'){
+        return  'Amber';
     }
-    else if (roadType === 'ave'){
-        return  `${favoriteColor}son`
+    else if (colorType === 'yellow'){
+        return 'Soleil';
+    }
+    else if (colorType === 'green'){
+        return 'Emerald';
+    }
+    else if (colorType === 'blue'){
+        return  'Celeste';
+    }
+    else if (colorType === 'purple'){
+        return 'Violet';
+    }
+    else if (colorType === 'pink'){
+        return  'Fuchsia'
+    }
+    else if (colorType === 'white'){
+        return 'Ivory'
+    }
+    else if (colorType === 'black'){
+        return  'Noir'
+    }
+    else if (colorType === 'brown'){
+        return 'Hazel'
     }
     else {
-        return  `${favoriteColor}stone`
+        return `${favoriteColor}stone`
     }
 }
 
@@ -58,19 +170,82 @@ function genMiddleName (roadType, favoriteColor){
 function genLastName(lastName){
     const lastLetter = lastName.charAt(lastName.length-1).toLowerCase()
     if (lastLetter === 'a'){
-        return 'Shadow'
+        return 'Ashford'
+    }
+    else if (lastLetter === 'b'){
+        return 'Bridgerton'
+    }
+    else if (lastLetter === 'c'){
+        return 'Clarendon'
+    }
+    else if (lastLetter === 'd'){
+        return 'Danbury'
     }
     else if (lastLetter === 'e'){
-        return 'Storm'
+        return 'Eastwick'
+    }
+    else if (lastLetter === 'f'){
+        return 'Fairchild'
+    }
+    else if (lastLetter === 'g'){
+        return 'Gillingham'
+    }
+    else if (lastLetter === 'h'){
+        return 'Hawthorne'
     }
     else if (lastLetter === 'i'){
-        return 'Blaze'
+        return 'Inglewood'
+    }
+    else if (lastLetter === 'j'){
+        return 'Julington'
+    }
+    else if (lastLetter === 'k'){
+        return 'Kensington'
+    }
+    else if (lastLetter === 'l'){
+        return 'Lovelace'
+    }
+    else if (lastLetter === 'm'){
+        return 'Montgomery'
+    }
+    else if (lastLetter === 'n'){
+        return 'Norwood'
     }
     else if (lastLetter === 'o'){
-        return 'Thorn'
+        return 'Oakhurst'
+    }
+    else if (lastLetter === 'p'){
+        return 'Pembroke'
+    }
+    else if (lastLetter === 'q'){
+        return 'Quintonvale'
+    }
+    else if (lastLetter === 'r'){
+        return 'Ravenshaw'
+    }
+    else if (lastLetter === 's'){
+        return 'Sutherland'
+    }
+    else if (lastLetter === 't'){
+        return 'Tremontford'
     }
     else if (lastLetter === 'u'){
-        return 'Frost'
+        return 'Underwood'
+    }
+    else if (lastLetter === 'v'){
+        return 'Vanderbilt'
+    }
+    else if (lastLetter === 'w'){
+        return 'Whitmore'
+    }
+    else if (lastLetter === 'x'){
+        return 'Xander'
+    }
+    else if (lastLetter === 'y'){
+        return 'Yardley'
+    }
+    else if (lastLetter === 'z'){
+        return 'Zellhurst'
     }
     else {
         return 'Moon' //Default last name for letters not matched
@@ -79,25 +254,42 @@ function genLastName(lastName){
 }
 
 //Generate Suffix 
-function genSuffix (favoriteAnimal){
-    return `of the ${favoriteAnimal}`
+function genSuffix (streetName){
+    return `of the ${streetName} House`
 }
 
 //Master Function To Assemble Full Name
 function genFullName () {
 // Define Variables From Inputs
-const firstName = document.getElementById('firstName').ariaValueMax.trim()
-const lastName = document.getElementById('lastName').ariaValueMax.trim()
-const monthType = document.getElementById('monthType').ariaValueMax.trim()
-const titleType = document.getElementById('titleType').ariaValueMax.trim()
-const favoriteAnimal = document.getElementById('favoriteAnimal').ariaValueMax.trim()
+const firstName = document.getElementById('firstName').value.trim()
+const lastName = document.getElementById('lastName').value.trim()
+const favoriteColor = document.getElementById('favoriteColor').value.trim()
+const titleType = document.getElementById('titleType').value.trim()
+const favoriteAnimal = document.getElementById('favoriteAnimal').value.trim()
 
 // Generate Each Part Of The Name Using Helper Functions
 const prefix = genPrefix(firstName)
 const newFirstName = genFirstName(firstName)
-const middleName = genMiddleName(roadType, favoriteColor)
+const middleName = genMiddleName(favoriteColor)
 const newLastName = genLastName(lastName)
-const suffix = genSuffix(favoriteAnimal)
+const suffix = genSuffix(streetName)
+
+// Functions To Capitalize Words
+const capitalizedPrefix = toCapitalize(prefix)
+const capitalizedNewFirstName = toCapitalize(newFirstName)
+const capitalizedMiddleName = toCapitalize(middleName)
+const capitalizedNewLastName = toCapitalize(newLastName)
+
+// Combine All Parts
+const fullName = `${capitalizedPrefix} ${capitalizedNewFirstName} ${capitalizedMiddleName} ${capitalizedNewLastName} ${capitalizedSuffix}`
 
 
+// display new name
+document.getElementById("result").textContent = fullName
+}
+
+// Function Capitalizer
+
+function toCapitalize(word){
+    return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()
 }
