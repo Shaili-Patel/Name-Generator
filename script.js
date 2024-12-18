@@ -1,13 +1,3 @@
-// // Generate Prefix Of First Name
-// function genPrefix (firstName, gender){
-//     if (gender === 'boy') {
-//         return 'Lord'
-//     }
-//     else {
-//         return 'Lady'
-//     }
-// }
-
 // Generate First Name Of Name
 function genFirstName (genderType, firstName) {
     const firstLetter = firstName.charAt(0).toLowerCase()
@@ -130,7 +120,7 @@ function genFirstName (genderType, firstName) {
 
 // Generate Middle Name
 
-function genMiddleName (favoriteColor){
+function genMiddleName (colorType){
     if (colorType === 'red'){
         return 'Crimson';
     } else if (colorType === 'orange'){
@@ -265,7 +255,7 @@ const firstName = document.getElementById('firstName').value.trim()
 const lastName = document.getElementById('lastName').value.trim()
 const favoriteColor = document.getElementById('favoriteColor').value.trim()
 const titleType = document.getElementById('titleType').value.trim()
-const favoriteAnimal = document.getElementById('favoriteAnimal').value.trim()
+const streetName = document.getElementById('favoriteAnimal').value.trim()
 
 // Generate Each Part Of The Name Using Helper Functions
 const prefix = genPrefix(firstName)
@@ -275,13 +265,14 @@ const newLastName = genLastName(lastName)
 const suffix = genSuffix(streetName)
 
 // Functions To Capitalize Words
-const capitalizedPrefix = toCapitalize(prefix)
+const capitalizedNewPrefix = toCapitalize(prefix)
 const capitalizedNewFirstName = toCapitalize(newFirstName)
-const capitalizedMiddleName = toCapitalize(middleName)
+const capitalizedNewMiddleName = toCapitalize(middleName)
 const capitalizedNewLastName = toCapitalize(newLastName)
+const capitalizedNewTitleType = toCapitalize(titleType)
 
 // Combine All Parts
-const fullName = `${capitalizedPrefix} ${capitalizedNewFirstName} ${capitalizedMiddleName} ${capitalizedNewLastName} ${capitalizedSuffix}`
+const fullName = `${capitalizedNewTitleType} ${capitalizedNewFirstName} ${capitalizedNewMiddleName} ${capitalizedNewLastName} ${capitalizedSuffix}`
 
 
 // display new name
