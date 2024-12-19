@@ -1,5 +1,7 @@
 // Generate First Name Of Name
-function genFirstName (genderType, firstName) {
+
+function genFirstName(firstName, genderType) {
+    console.log(firstName);
     const firstLetter = firstName.charAt(0).toLowerCase()
     if (genderType === 'boy') {
         if (firstLetter === 'a') {
@@ -118,9 +120,11 @@ function genFirstName (genderType, firstName) {
     }
 }
 
+
+
 // Generate Middle Name
 
-function genMiddleName (colorType){
+function genMiddleName(colorType){
     if (colorType === 'red'){
         return 'Crimson';
     } else if (colorType === 'orange'){
@@ -244,28 +248,28 @@ function genLastName(lastName){
 }
 
 //Generate Suffix 
-function genSuffix (streetName){
+function genSuffix(streetName){
     return `of the ${streetName} House`
 }
 
 //Master Function To Assemble Full Name
-function genFullName () {
+function genFullName() {
 // Define Variables From Inputs
 const firstName = document.getElementById('firstName').value.trim()
 const lastName = document.getElementById('lastName').value.trim()
-const favoriteColor = document.getElementById('favoriteColor').value.trim()
+const colorType = document.getElementById('colorType').value.trim()
 const titleType = document.getElementById('titleType').value.trim()
-const streetName = document.getElementById('favoriteAnimal').value.trim()
+const streetName = document.getElementById('streetName').value.trim()
+const genderType = document.getElementById('genderType').value.trim()
 
 // Generate Each Part Of The Name Using Helper Functions
-const prefix = genPrefix(firstName)
 const newFirstName = genFirstName(firstName)
-const middleName = genMiddleName(favoriteColor)
+const middleName = genMiddleName(colorType)
 const newLastName = genLastName(lastName)
-const suffix = genSuffix(streetName)
+const capitalizedSuffix = genSuffix(streetName)
+console.log(newFirstName);
 
 // Functions To Capitalize Words
-const capitalizedNewPrefix = toCapitalize(prefix)
 const capitalizedNewFirstName = toCapitalize(newFirstName)
 const capitalizedNewMiddleName = toCapitalize(middleName)
 const capitalizedNewLastName = toCapitalize(newLastName)
@@ -282,5 +286,6 @@ document.getElementById("result").textContent = fullName
 // Function Capitalizer
 
 function toCapitalize(word){
+    console.log(word);
     return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()
 }
